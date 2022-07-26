@@ -1,0 +1,54 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="nome" type="string" default="Eribigudigo" />
+    <aura:attribute name="idade" type="string" default="26" />
+    <aura:attribute name="cidade" type="string" default="Manaus City" />
+    <aura:attribute name="aniversario" type="string" default="25 de nov" />
+
+    
+    
+    <aura:attribute name="numero1" type="integer" default="10" />
+    <aura:attribute name="numero2" type="integer" default="10" />
+    <aura:attribute name="resultado" type="integer" default="10" />
+
+    <div class="slds-box slds-box_small" style="background-color:white;">
+        Nome: <b>{!v.nome}</b> <br/>
+        <lightning:input aura:id="myInput" type="text" value="{!v.nome}" />
+        <hr/>
+        Idade: <b>{!v.idade}</b> <br/>
+        <lightning:input aura:id="myInput" type="text" value="{!v.idade}"/>
+        <hr/>
+        Cidade: <b>{!v.cidade}</b> <br/>
+        <lightning:input aura:id="myInput" type="text" value="{!v.cidade}"/>
+
+        <hr/>
+        Aniversário: <b>{!v.aniversario}</b> <br/>
+        <lightning:input aura:id="myInput" type="text" value="{!v.aniversario}"/><br/>
+
+
+
+        <img src="https://i.gifer.com/B9Ov.gif" alt=""/>
+        
+        <lightning:map 
+        mapMarkers="{! v.mapMarkers }" 
+        zoomLevel="{!v.zoomLevel}" />
+    </div>
+
+    <div class="slds-box slds-box_small" style="background-color:white;">
+        <lightning:icon iconName="action:new_note" alternativeText="New note" title="New note" />
+        <b> Caculadora SHOW</b><br/><br/>
+        Número 1: {!numero1} 
+        <lightning:input aura:id="myInput" type="number" value="{!v.numero1}" placeholder="Digite um valor SHOW..."/>
+        <br/>
+        Número 2: {!numero2}
+        <lightning:input aura:id="myInput" type="number" value="{!v.numero2}" placeholder="Digite um valor SHOW..."/>
+        <br/><br/>
+        Resultado é: {!v.resultado}<br/><br/>
+
+        <lightning:button variant="brand" label="Somar" title="Somar" onclick="{!c.soma}" />
+        <lightning:button variant="brand" label="Subtrair" title="Subtrair" onclick="{!c.sub}" />
+        <lightning:button variant="brand" label="Multiplicar" title="Multiplicar" onclick="{!c.mult}" />
+        <lightning:button variant="brand" label="Dividir" title="Dividir" onclick="{!c.divi}" />
+        
+    </div>
+</aura:component>

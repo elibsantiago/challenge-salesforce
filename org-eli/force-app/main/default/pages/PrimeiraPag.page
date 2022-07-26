@@ -1,0 +1,31 @@
+<apex:page sidebar="false">
+
+    <style> 
+        h1{
+            font-size: 50px;
+            color: red;
+        }
+        .minhaDivTop{
+            font-family: Courier New, Courier, monospace;
+            font-size: 20px;
+            margin-top: 10px;
+
+        }
+    </style>
+
+    <h1>
+        Nova página que fala ne
+    </h1>
+    <hr/>
+    <div class="minhaDivTop">
+        <b>Nome:</b> Elibergh Santiago
+    </div>
+    <div class="minhaDivTop">
+        <b>Banda:</b> Novo Som
+    </div>
+    <div class="minhaDivTop">
+        <b>Cor:</b> Azul
+    </div>
+    
+
+</apex:page>

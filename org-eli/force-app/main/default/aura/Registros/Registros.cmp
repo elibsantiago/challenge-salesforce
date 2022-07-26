@@ -1,0 +1,14 @@
+<aura:component controller="TabelaShowController" implements="flexipage:availableForAllPageTypes">
+	<aura:attribute name="regConta" type="Object" />
+    
+    <!-- INICIALIZACAO DO COMPONENTE --> 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div aura:id="MinhaDivLinda" class="slds-card myDivLinda">
+    	<aura:iteration items="{!v.regConta}" var="item">
+            {!item.Name} - {!item.Phone} <br/>	
+    	</aura:iteration>
+    </div>
+    
+    <lightning:button variant="brand" label="Muda CSS" title="Muda CSS" onclick="{! c.mudaCss }" />
+</aura:component>

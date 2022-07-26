@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+	
+    <aura:attribute name="FraseShow" type="String" default="Frase aqui" />
+    <aura:attribute name="corDeFundo" type="String" default="white" />
+    
+    <div style="{!'background-color:' + v.corDeFundo}">
+        {!v.FraseShow} 
+    </div>
+    
+</aura:component>

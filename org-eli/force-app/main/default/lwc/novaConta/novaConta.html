@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Criar Conta">
+        <div class="slds-m-around_medium">
+
+            <lightning-input type="text" label="Nome Completo" onchange={handleOnChangeNome}></lightning-input>
+            <lightning-input type="text" label="Telefone" onchange={handleOnChangeTelefone}></lightning-input>
+            <lightning-input type="text" label="Email" onchange={handleOnChangeEmail}></lightning-input>
+
+
+            <lightning-button variant="brand" label="Inserir" title="Inserir" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+
+        </div>
+    </lightning-card>
+</template>

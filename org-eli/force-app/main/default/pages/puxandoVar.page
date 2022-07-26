@@ -1,0 +1,90 @@
+<apex:page sidebar="false" controller="TabelaShowController">
+     <style>
+         .estiloTable{
+             border: 1px black solid;
+             width: 70%;
+             margin-top: 5px;
+         }
+
+
+     </style>
+
+        <table class="estiloTable">
+                <tr>
+            <th>Objeto Contas</th>
+                </tr>
+                <tr>
+            <th>Id</th><th>Name</th><th>Type</th><th>Phone</th><th>Rating</th>
+                </tr>
+
+            <apex:repeat value="{!lstAcc}" var="conta" >
+                <tr>  
+                    <td> <a href="/{!conta.Id}" target="_blank"> {!conta.Id} </a><br/></td> 
+                    <td> <a href="/{!conta.Id}" target="_blank"> {!conta.Name} </a><br/></td>
+                    <td> <a href="/{!conta.Id}" target="_blank"> {!conta.Type} </a><br/></td>
+                    <td> <a href="/{!conta.Id}" target="_blank"> {!conta.Phone} </a><br/></td>
+                    <td> <a href="/{!conta.Id}" target="_blank"> {!conta.Rating} </a><br/></td>
+                </tr>
+            </apex:repeat>
+
+        </table><br/>
+
+        <table class="estiloTable">
+            <th>Objeto Contatos</th>
+                <tr>
+            <th>Id</th><th>Name</th><th>Email</th><th>Birthdate</th><th>Title</th>
+                </tr>
+
+            <apex:repeat value="{!lstCtt}" var="contato" >
+                <tr>  
+                    <td> <a href="/{!contato.Id}" target="_blank"> {!contato.Id} </a><br/></td> 
+                    <td> <a href="/{!contato.Id}" target="_blank"> {!contato.Name} </a><br/></td>
+                    <td> <a href="/{!contato.Id}" target="_blank"> {!contato.Email} </a><br/></td>
+                    <td> <a href="/{!contato.Id}" target="_blank"> {!contato.Birthdate} </a><br/></td>
+                    <td> <a href="/{!contato.Id}" target="_blank"> {!contato.title} </a><br/></td>
+                </tr>
+            </apex:repeat>
+
+        </table><br/>
+
+        <table class="estiloTable">
+            <th>Objeto Lead</th>
+                <tr>
+            <th>Name</th><th>Phone</th><th>Company</th><th>Address</th><th>CPF__c</th>
+                </tr>
+
+            <apex:repeat value="{!lstLead}" var="lead" >
+                <tr>  
+                    <td> <a href="/{!lead.Id}" target="_blank"> {!lead.name} </a><br/></td> 
+                    <td> <a href="/{!lead.Id}" target="_blank"> {!lead.Phone} </a><br/></td>
+                    <td> <a href="/{!lead.Id}" target="_blank"> {!lead.Company} </a><br/></td>
+                    <td> <a href="/{!lead.Id}" target="_blank"> {!lead.CPF__c} </a><br/></td>
+                </tr>
+            </apex:repeat>
+
+        </table><br/>
+
+        <table class="estiloTable">
+            <th>Objeto Case</th>
+                <tr>
+            <th>ParentId</th><th>CreatedById</th><th>CreatedDate</th><th>ClosedDate</th><th>Priority</th>
+                </tr>
+
+            <apex:repeat value="{!lstCase}" var="caso" >
+                <tr>  
+                    <td> <a href="/{!caso.Id}" target="_blank"> {!caso.ParentId} </a><br/></td> 
+                    <td> <a href="/{!caso.Id}" target="_blank"> {!caso.CreatedById} </a><br/></td>
+                    <td> <a href="/{!caso.Id}" target="_blank"> {!caso.CreatedDate} </a><br/></td>
+                    <td> <a href="/{!caso.Id}" target="_blank"> {!caso.ClosedDate} </a><br/></td>
+                    <td> <a href="/{!caso.Id}" target="_blank"> {!caso.Priority} </a><br/></td>
+                </tr>
+            </apex:repeat>
+
+        </table><br/>
+
+
+        
+
+
+
+</apex:page>

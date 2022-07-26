@@ -1,0 +1,28 @@
+<apex:page sidebar="false">
+	<!-- Controlador Padrão dessa Visualforce é Account -->
+    
+    
+    <!-- APEX REPEAT -->
+    <!-- CONTROLLERS -->
+    <!-- Controladores Padrões 			-->
+    <!-- Controladores Personalizados 	-->
+    
+    <!-- Grande maioria das tags do HTML -->
+    <!-- Possuem a sua versão do Visualforce -->
+    
+    <!-- 
+		Variaveis Globais
+		- Não é necessário declarar 
+		
+	-->
+    
+    <apex:form > 
+        <apex:pageBlock title="Olá {!$User.FirstName}!">
+            
+        </apex:pageBlock>
+        <!-- 
+			Cria uma div e da o estilo X para ela
+			coloca o titulo como Olá {!$User.FirstName}!
+		-->
+    </apex:form> 
+</apex:page>

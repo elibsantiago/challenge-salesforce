@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="minhaFraseShow" type="String" default="Relou Uord" />
+    <aura:attribute name="CorDeFundo" type="String" default="white" />
+	
+    <div style="{!'background-color:' + v.CorDeFundo}">
+         {!v.minhaFraseShow}
+    </div>
+</aura:component>

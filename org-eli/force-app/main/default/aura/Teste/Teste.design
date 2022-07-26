@@ -1,0 +1,4 @@
+<design:component>
+    <design:attribute name="FraseShow" label="Digite aqui sua frase..." />
+    <design:attribute name="corDeFundo" label="Troque a cor de fundo.." />
+</design:component>
