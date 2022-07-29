@@ -1,0 +1,9 @@
+:host {
+    --sds-c-modal-content-color-background: rgba(133, 182, 210, 0.411);
+}
+
+lightning-button-icon {
+    background-color: white;
+    padding: 5px 0px 8px 0px;
+    border-radius: 5px;
+}
