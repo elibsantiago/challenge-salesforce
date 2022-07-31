@@ -1,26 +1,60 @@
 <template>
 
-    <lightning-quick-action-panel header="Busca Endereço">
+    <lightning-quick-action-panel header="Busca Endereço" >
         
         <lightning-layout multiple-rows="true">
+
             <lightning-layout-item padding="around-medium" size="6">
-                <lightning-input type="text" label="CEP"></lightning-input>
-                <lightning-input type="text" label="Rua"></lightning-input>
-                <lightning-input type="text" label="Cidade"></lightning-input>
+                <lightning-input 
+                    type="text" 
+                    label="CEP"
+                    onkeyup={handleCepSearch}
+                ></lightning-input>
+
+                <lightning-input 
+                    type="text" 
+                    label="Rua"
+                    read-only="true"
+                    value={endereco.logradouro}
+                ></lightning-input>
+
+                <lightning-input 
+                    type="text" 
+                    label="Cidade"
+                    read-only="true"
+                    value={endereco.localidade}
+                ></lightning-input>
             </lightning-layout-item>
 
             <lightning-layout-item padding="around-medium" size="6" style="padding-top: 2.4rem;">
-                <lightning-button-icon icon-name="utility:search"  alternative-text="Search" title="Search"></lightning-button-icon>
-                <lightning-input type="text" label="Bairro"></lightning-input>
-                <lightning-input type="text" label="Estado"></lightning-input>
+                <lightning-button-icon 
+                    icon-name="utility:search"  
+                    alternative-text="Search" 
+                    title="Search"
+                    onclick={ativaConsulta}
+                ></lightning-button-icon>
+
+                <lightning-input 
+                    type="text" 
+                    label="Bairro"
+                    read-only="true"
+                    value={endereco.bairro}
+                ></lightning-input>
+
+                <lightning-input 
+                    type="text" 
+                    label="Estado"
+                    read-only="true"
+                    value={endereco.uf}
+                ></lightning-input>
             </lightning-layout-item>
-            
+
         </lightning-layout>
 
         <div slot="footer">
             
             <lightning-button variant="neutral" label="Cancelar"></lightning-button>
-            <lightning-button variant="brand" label="Salvar" class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand" label="Salvar" class="slds-m-left_x-small" onclick={handleSave}></lightning-button>
         </div>
     </lightning-quick-action-panel>
     
